@@ -26,7 +26,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                    
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
@@ -60,14 +60,7 @@
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-                            <main class="py-4">
-                                @if (session()->has('pesan'))
-                                    <div class="alert alert-info" role="alert">
-                                        {{ session('pesan') }}
-                                    </div>
-                                @endif
-                                @yield('content')
-                            </main>
+
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -98,6 +91,14 @@
         </nav>
 
         <main class="py-4">
+            <!-- Display flash messages here -->
+            @if (session()->has('pesan'))
+                <div class="alert alert-info" role="alert">
+                    {{ session('pesan') }}
+                </div>
+            @endif
+
+            <!-- This is the main content that other views will inject -->
             @yield('content')
         </main>
     </div>
