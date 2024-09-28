@@ -1,4 +1,5 @@
 @extends('layouts.app', ['title' => 'Data Pasien'])
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -35,9 +36,11 @@
                                         <td>{{ $item->umur }}</td>
                                         <td>
                                             @if($item->foto)
-                                                <img src="{{ asset('path_to_your_image_directory/' . $item->foto) }}" alt="Foto Pasien" width="50">
+                                                <!-- Jika pasien memiliki foto, tampilkan -->
+                                                <img src="{{ asset('uploads/pasien/' . $item->foto) }}" alt="Foto Pasien" width="50">
                                             @else
-                                                Tidak ada foto
+                                                <!-- Jika tidak ada foto, tampilkan gambar default -->
+                                                <img src="{{ asset('uploads/pasien/default.jpeg') }}" alt="Foto Default" width="50">
                                             @endif
                                         </td>
                                         <td>{{ $item->alamat }}</td>

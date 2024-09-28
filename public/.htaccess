@@ -19,3 +19,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+<FilesMatch "\.(jpg|jpeg|png|gif|bmp)$">
+    Allow from all
+</FilesMatch>

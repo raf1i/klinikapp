@@ -97,8 +97,6 @@
                     {{ session('pesan') }}
                 </div>
             @endif
-
-            <!-- This is the main content that other views will inject -->
             @yield('content')
         </main>
     </div>
