@@ -47,12 +47,12 @@ Aplikasi **App-Klinik** adalah sistem manajemen pasien yang membantu klinik dala
 
 ## **Struktur Branch di GitHub**
 
-Proyek ini dikembangkan melalui beberapa branch di GitHub, berikut detailnya:
+Proyek ini dikembangkan melalui beberapa branch di GitHub:
 
-- **Branch Pertemuan7**: Tahap awal pengembangan dengan fitur dasar.
-- **Branch Pertemuan8**: Penambahan fitur login dan autentikasi pengguna.
-- **Branch PSTS**: Penambahan fitur pengelolaan data pasien seperti jenis kelamin, usia, foto, dan alamat.
-- **Branch main**: Branch utama yang berisi versi final dan stabil dari aplikasi.
+- **Branch Pertemuan7**
+- **Branch Pertemuan8**
+- **Branch PSTS**
+- **Branch main**
 
 ---
 
