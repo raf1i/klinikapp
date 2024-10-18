@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_modern')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
     <form method="POST" action="{{ route('pasien.update', $pasien->id) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        
+
         <div class="mb-3">
             <label for="no_pasien" class="form-label">Nomor&nbsp;Pasien</label>
             <input type="text" class="form-control @error('no_pasien') is-invalid @enderror" id="no_pasien" name="no_pasien" value="{{ old('no_pasien', $pasien->no_pasien) }}" required>
@@ -16,7 +16,7 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        
+
         <div class="mb-3">
             <label for="nama" class="form-label">Nama&nbsp;Pasien</label>
             <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama', $pasien->nama) }}" required>
