@@ -18,15 +18,14 @@
         <aside class="left-sidebar">
             <!-- Sidebar scroll-->
             <div>
-                <div>
-                    <div class="brand-logo d-flex align-items-center justify-content-between">
-                        <a href="./index.html" class="text-nowrap logo-img">
-                            <img src="/modern/src/assets/images/logos/dark-logo.svg" width="180" alt="test" />
-                        </a>
-                        <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-                            <i class="ti ti-x fs-8"></i>
-                        </div>
+                <div class="brand-logo d-flex align-items-center justify-content-between">
+                    <a href="./index.html" class="text-nowrap logo-img">
+                        <img src="/modern/src/assets/images/logos/dark-logo.svg" width="180" alt="test" />
+                    </a>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                        <i class="ti ti-x fs-8"></i>
                     </div>
+                </div>
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
                     <ul id="sidebarnav">
@@ -35,7 +34,8 @@
                             <span class="hide-menu">Menu</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/home" aria-expanded="false">
+                            <a class="sidebar-link {{ request()->is('home') ? 'active' : '' }}" href="/home"
+                                aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
@@ -43,15 +43,17 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/daftar" aria-expanded="false">
+                            <a class="sidebar-link {{ request()->is('daftar*') ? 'active' : '' }}" href="/daftar"
+                                aria-expanded="false">
                                 <span>
                                     <i class="ti ti-clipboard"></i>
                                 </span>
-                                <span class="hide-menu">Pendaftaran</span>
+                                <span class="hide-menu">Data Pendaftaran</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/pasien" aria-expanded="false">
+                            <a class="sidebar-link {{ request()->is('pasien*') ? 'active' : '' }}" href="/pasien"
+                                aria-expanded="false">
                                 <span>
                                     <i class="ti ti-user-exclamation"></i>
                                 </span>
@@ -59,7 +61,8 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/poli" aria-expanded="false">
+                            <a class="sidebar-link {{ request()->is('poli*') ? 'active' : '' }}" href="/poli"
+                                aria-expanded="false">
                                 <span>
                                     <i class="ti ti-building"></i>
                                 </span>
@@ -67,7 +70,8 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/users" aria-expanded="false">
+                            <a class="sidebar-link {{ request()->is('users*') ? 'active' : '' }}" href="/users"
+                                aria-expanded="false">
                                 <span>
                                     <i class="ti ti-user"></i>
                                 </span>

@@ -15,6 +15,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('pasien', App\Http\Controllers\PasienController::class);
+Route::resource('daftar', App\Http\Controllers\DaftarController::class);
 
 Route::middleware(['auth'])->group(function () {
    Route::resource('pasien', App\Http\Controllers\PasienController::class);
