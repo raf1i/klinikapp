@@ -8,11 +8,27 @@
                     <div class="card-header">Form Pasien</div>
                     <div class="card-body">
                         <h3>Data pasien</h3>
+                        
+                        <!-- Search Bar -->
                         <div class="row mb-3 mt-3">
                             <div class="col-md-6">
+                                <form action="{{ route('pasien.index') }}" method="GET" class="d-flex">
+                                    <input
+                                        type="text"
+                                        name="search"
+                                        class="form-control me-2"
+                                        placeholder="Cari nama atau nomor pasien"
+                                        value="{{ request('search') }}"
+                                    >
+                                    <button class="btn btn-primary btn-sm" type="submit">Cari</button>
+                                </form>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <a href="/pasien/create" class="btn btn-primary btn-sm">Tambah Pasien</a>
                             </div>
                         </div>
+
+                        <!-- Tabel Pasien -->
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -27,7 +43,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($pasien as $item)
+                                @forelse ($pasien as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->no_pasien }}</td>
@@ -36,10 +52,8 @@
                                         <td>{{ $item->umur }}</td>
                                         <td>
                                             @if($item->foto)
-                                                <!-- Jika pasien memiliki foto, tampilkan -->
                                                 <img src="{{ asset('uploads/pasien/' . $item->foto) }}" alt="Foto Pasien" width="50">
                                             @else
-                                                <!-- Jika tidak ada foto, tampilkan gambar default -->
                                                 <img src="{{ asset('uploads/pasien/default.jpeg') }}" alt="Foto Default" width="50">
                                             @endif
                                         </td>
@@ -54,7 +68,11 @@
                                             </form>
                                         </td>
                                     </tr>
-                                @endforeach
+                                @empty
+                                    <tr>
+                                        <td colspan="8" class="text-center">Tidak ada data pasien ditemukan.</td>
+                                    </tr>
+                                @endforelse
                             </tbody>
                         </table>
                         {!! $pasien->links() !!}

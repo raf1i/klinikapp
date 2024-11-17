@@ -2,21 +2,29 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PasienController;
+use App\Http\Controllers\DaftarController;
+
+Route::get('/daftar/create', [DaftarController::class, 'create'])->name('daftar.create');
+Route::get('/daftar/{id}', [DaftarController::class, 'show'])->name('daftar.show');
+// Route Welcome Page
 Route::get('/', function () {
     return view('welcome');
 });
-use App\Http\Controllers\PoliController;
 
-Route::resource('poli', PoliController::class);
-
+// Auth Routes
 Auth::routes();
 
+// Home Route (Setelah Login)
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('pasien', App\Http\Controllers\PasienController::class);
-Route::resource('daftar', App\Http\Controllers\DaftarController::class);
-
+// Routes with Authentication
 Route::middleware(['auth'])->group(function () {
-   Route::resource('pasien', App\Http\Controllers\PasienController::class);
+    // Pasien Resource Routes
+    Route::resource('pasien', App\Http\Controllers\PasienController::class);
+
+    // Poli Resource Routes
+    Route::resource('poli', App\Http\Controllers\PoliController::class);
+
+    // Daftar Resource Routes
+    Route::resource('daftar', App\Http\Controllers\DaftarController::class);
 });
