@@ -1,19 +1,50 @@
 # Klinik App
 
-## Laravel 11
+Membuat aplikasi klinik menggunakan Laravel 11 diajarkan di StudentDay Programming peminatan Web Programming. Dikerjakan oleh anak-anak WebPro 7 yang keren-keren dan hebat-hebat bersama Guru dan Asistennya yang juga keren.
+Pembuatan aplikasi klinik menggunakan framework Laravel akan mempermudah manajemen data di klinik. Pembuatan aplikasi ini dilakukan oleh Student Day Programming Website - SMA Plus PGRI Cibinong.
+Sistem manajemen klinik berbasis Laravel 11 untuk pengelolaan data pasien, pendaftaran, dan poli.
 
-Proyek **Klinik App** ini dikembangkan menggunakan Laravel 11 sebagai bagian dari program pembelajaran Web Programming di StudentDay. Proyek ini difokuskan pada sistem manajemen klinik dengan fitur CRUD untuk **Poli**, di mana kamu dapat menambah, melihat, mengedit, dan menghapus data poli. Proyek ini dikerjakan oleh [Nama Kamu], dengan bimbingan dari para guru dan asisten.
+## **Fitur yang Tersedia**
 
-# **Klinik App: Sistem Manajemen Poli**
+### **Tampilan Depan**
+- Halaman Welcome
+- Halaman Register
+- Halaman Login
 
-Aplikasi **Klinik App** adalah sistem manajemen poli yang membantu klinik dalam mengelola data poli, termasuk fitur **tambah**, **lihat**, **edit**, dan **hapus data poli**, serta pengelolaan **nama** dan **biaya** setiap poli.
+### **Dashboard**
+- Statistik dan navigasi utama
+- Custom Layout
 
----
+### **Data Pasien**
+- Lihat Data Pasien
+- Tambah Data Pasien
+- Edit Data Pasien
+- Delete Data Pasien
 
-## **Fitur Utama**
+### **Data Pendaftaran**
+- Lihat Data Pendaftaran
+- Tambah Pendaftaran Pasien
+- Edit Data Pendaftaran
+- Delete Data Pendaftaran
+- Pencarian Pendaftaran berdasarkan Nama Pasien atau Poli
 
-- [x] **Dashboard** dengan tampilan statistik dan informasi poli.
-- [x] **Lihat Data Poli** dengan rincian lengkap seperti **nama** dan **biaya** poli.
-- [x] **Tambah Data Poli** melalui form input sederhana.
-- [x] **Edit Data Poli** yang memungkinkan pengeditan informasi poli yang ada.
-- [x] **Hapus Data Poli** dengan konfirmasi sebelum penghapusan.
+### **Data Poli**
+- Lihat Data Poli
+- Tambah Data Poli
+- Edit Data Poli
+- Delete Data Poli
+
+## **Fitur yang Diupdate**
+### **Pendaftaran Pasien**
+- Lihat Data dengan detail nama pasien, nomor pasien, jenis kelamin, tanggal daftar, poli, dan keluhan.
+- Pencarian berdasarkan Nama Pasien atau Poli.
+
+### **Dashboard dan Layout**
+- Penyesuaian tampilan dashboard menggunakan custom layout modern.
+- Perbaikan error gambar tidak ditemukan.
+
+## **Update Terbaru**
+- Pengelolaan foto pasien.
+- Validasi form dan penyesuaian tata letak.
+- Perbaikan bug pada fitur pendaftaran dan poli.
+
